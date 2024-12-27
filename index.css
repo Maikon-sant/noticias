@@ -1,0 +1,667 @@
+body{
+    margin: 0;
+    overflow-x: hidden;
+
+}
+#header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0px; 
+    background-color: #000000; 
+    color: white;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0; 
+    height: 6vw;
+    
+}
+
+.logo {
+    position: relative; /* Permite posicionar o pseudo-elemento em relação ao logo */
+    top: 10px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    margin-left: 12.5vw;
+    display: inline-block; /* Para que a linha fique alinhada corretamente */
+    cursor: pointer;
+}
+
+.logo::after {
+    content: ""; /* Cria um elemento vazio */
+    position: absolute; /*posiciona a linha em relação ao logo */
+    left: 0; /* Inicia na parte esquerda */
+    bottom: -5px;
+    width: 100%; /* Largura da linha será igual à do logo */
+    height: 2px; 
+    background-color: red; 
+    transform: scaleX(0); /* Inicialmente invisível */
+    transition: transform 0.3s ease; /* Efeito de transição*/
+}
+
+/* Efeito de hover para a linha */
+.logo:hover::after {
+    transform: scaleX(1); /* Expande a linha para 100% da largura ao passar o mouse */
+}
+
+
+.botoes_header {
+    display: flex; 
+    gap: 15px;
+}
+
+.btn {
+    right: 13vw;
+    position: relative;
+    background-color: #fff; 
+    color: #000000; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: #ddd; 
+}
+
+
+.btn:active {
+    background-color: #ccc; 
+}
+
+
+
+#titulo_princ{
+    color: red;
+    text-align: center;
+    position: relative;
+    top: 10vw;
+    left: 1.5vw;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 100vw;
+}
+
+img{
+    float: left;
+    position: relative;
+    height: 20vw;
+    border: none;
+    padding: 0;
+    margin: 7.5vw;
+    margin-left: 14vw;
+    top: 7vw; 
+    border-radius: 10px;
+    
+}
+
+#container-texto{
+    height: 20vw;
+    width: 40vw;
+    color: rgb(117, 117, 117);
+    border: 1px solid #a9a9a9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+    position: relative;
+    margin-left: 50vw;
+    top: 13vw;
+    border-radius: 10px;
+}
+
+#texto_prin{
+    color: black;
+    position: relative;
+    max-width: 40vw;
+    left: -1vw;
+    top: 1.5vw;
+    text-align: center;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+#descricao{
+    position: relative;
+    font-size: 13px;
+    top: 35vw;
+    left: -36.5vw;
+    color: #333;
+}
+
+/*Aqui começam as sub noticias*/
+
+.cards{
+    width: 50%;
+    height: 20vw;
+    
+    border-radius: 10px;
+    display: column;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    position: relative;
+    margin-left: 14vw;
+    top: 14vw;
+    
+}
+
+.line{
+    color: black;
+    position: absolute;
+    top: 18.3vw;
+    margin-left: 0vw;
+}
+
+#img_card_1{
+    max-width: 50%;
+    max-height: 70%;
+    border-radius: 5%;
+    position: relative;
+    top: -15vw;
+    margin-left: 0vw;
+}
+
+#img_card_2{
+    max-width: 50%;
+    max-height: 70%;
+    border-radius: 5%;
+    position: relative;
+    top: -23vw;
+    margin-left: 0vw;
+}
+
+#img_card_3{
+    max-width: 50%;
+    max-height: 70%;
+    border-radius: 5%;
+    position: relative;
+    top: -31vw;
+    margin-left: 0vw;
+}
+
+.title_list_news{
+    max-width: 24vw;
+    position: absolute;
+    margin-left:28vw;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 3.5vw;
+    color: red;
+}
+
+.description_list_news{
+    position: absolute;
+    margin-left: 28vw;
+    font-size: 10px;
+    top: 10vw;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: start;
+
+}
+
+.button_cards {
+    position: absolute;
+    background-color: red;
+    color: white;
+    left: 28vw;
+    top: 14vw;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 3vw;
+    width: 8vw;
+    border: none;
+    border-radius: 10px;
+}
+
+.button_cards:hover {
+    transform: scale(1.05);
+    background-color: #fa3535; 
+}
+
+
+
+/*Aqui terminam as subnoticias*/
+/*Aqui começam as noticias mais lidas*/
+.princ_card_mais_lidas{
+    width: 30%;
+    height: 38vw;
+    color: rgb(117, 117, 117);
+    border: 1px solid #a9a9a9;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .05);
+    
+    border-radius: 10px;
+    display: column;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 67vw;
+    top: -44.5vw;
+}
+
+#title_card_mais_lidas{
+    position: absolute;
+    margin-left: 2vw;
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top:-0.5vw;
+    color: #333;
+}
+
+
+
+#line_card_mais_lidas{
+    color: #a9a9a9;
+    position: absolute;
+    top: 2vw;
+    margin-left: 0vw;
+}
+
+.card_mais_lidas{
+    width: 85%;
+    height: 5.5vw;
+
+    border-radius: 10px;
+    display: column;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    position: relative;
+    margin-left: 2vw;
+    top: 3.8vw;
+}
+
+.number_card_mais_lidas{
+    position: absolute;
+    font-size: 2vw;
+    top: -0.6vw;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+.title_mais_lidas{
+    max-width: 20vw;
+    color: red;
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin-left: 3vw;
+    top: 1vw;
+    position: relative;
+}
+
+.title_mais_lidas:hover{
+    transform: scale(1.05);
+}
+
+
+
+.line_mais_lidas{
+    color: #a9a9a9;
+    position: absolute;
+    top: 3.8vw;
+    margin-left: 0vw;
+}
+
+
+.rodape{
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    font-size: 14px;
+    font-family: helvetica;
+    height: auto;
+
+}
+.rodape a{
+    text-decoration: none;
+    color: white;
+}
+
+.rodape_princ{
+    display: flex;
+    flex-wrap: wrap;
+    
+    width:100%;
+    margin: auto;
+    align-items: stretch;
+    padding: 10px 10px 40px 10px;
+}
+.rodape_noticias, .rodape_contatos, .rodape_links, .rodape_outros{
+    display: flex;
+    align-items: start;
+    width: calc(100% / 4 - 20px);
+    padding: 10px;
+}
+
+.rodape span{
+    font-size: 20px;
+    color: white;
+}
+.rodape_direitos{
+    background-color: black;
+    padding: 10px;
+    margin: 0px;
+    text-align: center;
+}
+
+
+
+
+
+/*Noticia Problema x Problema*/
+
+menu{
+    width: 50vw;
+    height: 30vw;
+    position: relative;
+    left: 25%;
+    top: 10vw;
+}
+
+#title_princ2{
+    color: red;
+    position: relative;
+    margin-top: 4vw;
+    margin-left: 10%;
+    font-size: 45px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 40vw;
+    text-align: start;
+}
+
+#subtitle2{
+    position: relative;
+    font-size: 24px;
+    margin-top: 2vw;
+    margin-left: 10%;
+    color: #333;
+    max-width: 40vw;
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#information{
+    position: relative;
+    font-size: 20px;
+    margin-top: 2vw;
+    margin-left: 10%;
+    color: #333;
+    max-width: 40vw;
+    text-align: start;
+}
+
+#name{
+    color: red;
+}
+
+#local{
+    color: #4f5257;
+}
+
+.data{
+    position: relative;
+    font-size: 14px;
+    margin-top: -0.5vw;
+    margin-left: 10%;
+    color: #333;
+    max-width: 40vw;
+    text-align: start;
+}
+
+.redes{
+    margin-left: 5vw;
+    position: relative;
+    background-color: #dedede; 
+    color: #000000; 
+    border: none; 
+    text-decoration: none;
+    border-radius: 10px; 
+    padding: 20px 91px; 
+    top: 2.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: -4.5vw;
+}
+
+#btfacebook:hover{
+    background-color: #0866ff;
+    
+}
+
+#btwhatsapp:hover{
+    background-color: #0dca54;
+}
+
+#sharebtn:hover{
+    background-color: #4f5257;
+}
+
+.container_img{
+    background-color: #000000;
+}
+
+.teste{
+    position: relative;
+    background-position: 50%;
+    height: 20vw;
+    width: 40vw;
+    top: 6vw;
+    margin-left: 5vw;
+}
+#image_page2{
+    background-position: 50%;
+    position: relative;
+    width: 100%;
+    border: none;
+    padding: 0;
+    margin-left: 0vw;
+    top: -7.5vw; 
+    border-radius: 20px; 
+}
+#descricao_pg2{
+    position: relative;
+    max-width: 40vw;
+    font-size: 14px;
+    margin-top: 2vw;
+    margin-left: 5vw;
+    color: #333;
+    text-align: start;
+    top: -8vw;
+}
+
+.news_text_page2{
+    position: relative;
+    height: 6vw;
+    width: 40vw;
+    margin-left: 5vw;
+    top: -7vw;
+    background-position: 50%;
+}
+
+.main_text_page2{
+    position: relative;
+    font-size: 24px;
+    margin-top: 2vw;
+    margin-left: 0vw;
+    color: #333;
+    max-width: 40vw;
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.important1{
+    color: red;
+    cursor: pointer;
+}
+.important1:hover{
+    text-decoration: underline;
+}
+
+.important2{
+    color: red;
+    cursor: pointer;
+}
+.important2:hover{
+    text-decoration: underline;
+}
+
+.important3{
+    color: red;
+    cursor: pointer;
+}
+.important3:hover{
+    text-decoration: underline;
+}
+
+.important4{
+    color: red;
+    cursor: pointer;
+}
+.important4:hover{
+    text-decoration: underline;
+}
+
+.line_pub{
+    height: 2vw;
+    width: 40vw;
+    position: absolute;
+    margin-top: -6vw;
+    margin-left: 5vw;
+}
+
+.text_line_pub{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*estilos da publicide*/
+.publicidade {
+    height: 20vw;
+    width: 40vw;
+    position: relative;
+    margin-top: -16vw;
+    margin-left: -9vw;
+}
+
+#imagem {
+    width: 100%; /*ocupa a largura total do contêiner*/
+    height: 20vw;
+}
+
+.news_text_page2_after_half{
+    position: relative;
+    height: 6vw;
+    width: 40vw;
+    margin-left: 5vw;
+    top: 4vw;
+    background-position: 50%;
+}
+
+.main_text_page2_after_half{
+    position: relative;
+    font-size: 24px;
+    margin-top: 7.5vw;
+    margin-left: 0vw;
+    color: #333;
+    max-width: 40vw;
+    text-align: start;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.important5{
+    color: red;
+    cursor: pointer;
+}
+.important5:hover{
+    text-decoration: underline;
+}
+
+.important6{
+    color: red;
+    cursor: pointer;
+}
+.important6:hover{
+    text-decoration: underline;
+}
+
+.speech_line{
+    height: 1vw;
+    width: 40vw;
+    position: absolute;
+    margin-top: 4.5vw;
+    margin-left: 5vw;
+    
+}
+
+.text_speech_line{
+    position: relative;
+    top: -1vw;
+}
+
+.speech_space{
+    height: 4vw;
+    width: 40vw;
+    position: relative;
+    margin-top: 5.5vw;
+    margin-left: 5vw;
+    
+}
+
+.speech{
+    position: relative;
+    top: 1vw;
+    margin-left: 0vw;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: start;
+}
+
+.speech_line2{
+    height: 1vw;
+    width: 40vw;
+    position: absolute;
+    margin-top: 0.5vw;
+    margin-left: 5vw;
+}
+
+.answer{
+    position: relative;
+    height: 4vw;
+    width: 40vw;
+    
+    margin-left: 5vw;
+    margin-top: 4vw;
+}
+
+.response_text{
+    position: relative;
+    top: 0vw;
+    margin-left: 0vw;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: start;
+    color: #333;
+}
+
+.video{
+    height: 20vw;
+    width: 40vw;
+    position: relative;
+    margin-left: 5vw;
+    margin-top: 2vw;
+}
+
+.response_video{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
